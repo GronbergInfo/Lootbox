@@ -1,7 +1,7 @@
-﻿<Application x:Class="Lootbox.App"
+﻿<Application x:Class="LootBox.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Lootbox"
+             xmlns:local="clr-namespace:LootBox"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
