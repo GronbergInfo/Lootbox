@@ -11,13 +11,13 @@ namespace LootBox
         public MainWindow()
         {
             InitializeComponent();
-            Ss();
+            //Ss();
 
         }
 
-        private void Ss()
+        private void Ss(string prefix = "LBI")
         {
-           var currentEventIdentifier = "LBI00069420";  
+           var currentEventIdentifier = prefix + "00069420";  
             for (int index = 0; index < 5; index++)  
             {  
                 currentEventIdentifier = EventIncrementer.Instance.EventSequence(currentEventIdentifier);  
