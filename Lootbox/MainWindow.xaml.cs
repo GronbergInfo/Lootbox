@@ -23,6 +23,8 @@ namespace Lootbox
         public MainWindow()
         {
             InitializeComponent();
+            
+            
         }
     }
 }
