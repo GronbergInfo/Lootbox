@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 
 namespace LootBox.classes;
 
@@ -9,18 +8,21 @@ public class Logging
 {
     // public class FileLogging
     //{
-    private string _logFolder =
+    private readonly string _logFolder =
         Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly()!.Location) + @"\logs\";
 
 
-    public Boolean Log(LogLevel level, string message)
+    public void Log(LogLevel level, string message)
     {
-        var success = false;
+
 
         try
         {
-            if (level < 0)
-                return false;
+            if (level < 0) return;    // If level is less than 0,
+                                            // it means that the log level is not set.
+                                            // So, we exit the function with false.
+            
+            
             string logFilePath = _logFolder;
             
             if (!Directory.Exists(logFilePath)) Directory.CreateDirectory(logFilePath);
@@ -31,16 +33,16 @@ public class Logging
 
             string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,char.Parse(" ")) + ": " + message;
             File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
-            success = true;
+           
         }
         catch (Exception ex)
         {
             //Console.WriteLine(ex.Message);
             Debug.WriteLine(ex.Message);
-            success = false;
+           
         }
 
-        return success;
+       
     }
 
 
