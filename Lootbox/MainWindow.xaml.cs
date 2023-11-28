@@ -23,6 +23,8 @@ namespace LootBox
             {
                 currentEventIdentifier = EventIncrementer.Instance.EventSequence(currentEventIdentifier);
                 _log.Log(Logging.LogLevel.Information, "LBIN: " + currentEventIdentifier);
+                _log.Log(Logging.LogLevel.Error, "LBIN: " + currentEventIdentifier);
+                _log.Log(Logging.LogLevel.Warning, "LBIN: " + currentEventIdentifier);
 
                 //Console.WriteLine(currentEventIdentifier);  
                 //Show a messagebox displaying the contents of the string: currentEventIdentifier

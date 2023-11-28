@@ -45,7 +45,7 @@ public class Logging
             // }
 
 
-            string logEntry = $"{DateTime.Now} [{level}] {message}";
+            string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,Char.Parse(" ")) + " " + message;
             File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
             success = true;
         }
