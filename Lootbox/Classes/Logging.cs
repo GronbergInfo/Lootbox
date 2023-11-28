@@ -26,11 +26,10 @@ public class Logging
             if (!Directory.Exists(logFilePath)) Directory.CreateDirectory(logFilePath);
             
             
-            logFilePath = Path.Combine(logFilePath,
-                $"{DateTime.UtcNow.ToString("yyyy-MM-dd HH-00-00")}.log");
+            logFilePath = Path.Combine(logFilePath, $"{DateTime.UtcNow:yyyy-MM-dd HH-00-00}.log");
 
 
-            string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,Char.Parse(" ")) + " " + message;
+            string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,char.Parse(" ")) + ": " + message;
             File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
             success = true;
         }
