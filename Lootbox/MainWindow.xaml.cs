@@ -16,7 +16,7 @@ namespace LootBox
             Ss();
         }
 
-        private void Ss(string prefix = "LBI")
+        private void Ss(string prefix = "LBIN")
         {
             var currentEventIdentifier = prefix + "00069420";
             for (int index = 0; index < 5; index++)
