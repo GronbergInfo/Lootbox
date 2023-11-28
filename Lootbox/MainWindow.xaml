@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LootBox"
         mc:Ignorable="d"
-        Title="Lootbox - Storage Management" Height="450" Width="800">
+        Title="LootBox - Storage Management" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75px" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
+        <!-- Left column content -->
+        <Grid Grid.Column="0" Background="LightBlue">
+            <!-- Add your content here -->
+        </Grid>
+
+        <!-- Right column content -->
+        <Grid Grid.Column="1">
+            <!-- Add your content here -->
+        </Grid>
     </Grid>
 </Window>
