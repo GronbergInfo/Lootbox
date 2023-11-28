@@ -11,7 +11,7 @@ namespace LootBox
         public MainWindow()
         {
             InitializeComponent();
-            //Ss();
+            Ss();
         }
 
         private void Ss(string prefix = "LBI")
@@ -22,7 +22,7 @@ namespace LootBox
                 currentEventIdentifier = EventIncrementer.Instance.EventSequence(currentEventIdentifier);
                 //Console.WriteLine(currentEventIdentifier);  
                 //Show a messagebox displaying the contents of the string: currentEventIdentifier
-                MessageBox.Show(currentEventIdentifier);
+                //MessageBox.Show(currentEventIdentifier);
             }
         }
     }
