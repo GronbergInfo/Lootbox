@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using LootBox.classes;
+﻿using LootBox.classes;
 
 namespace LootBox
 {
@@ -14,7 +13,7 @@ namespace LootBox
             Ss();
         }
 
-        private void Ss(string prefix = "LBI")
+        private static void Ss(string prefix = "LBI")
         {
             var currentEventIdentifier = prefix + "00069420";
             for (int index = 0; index < 5; index++)
