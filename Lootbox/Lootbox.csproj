@@ -14,8 +14,4 @@
       <Folder Include="data\logs\" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="WPF-UI" Version="3.0.0-preview.11" />
-    </ItemGroup>
-
 </Project>
