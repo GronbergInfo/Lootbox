@@ -5,21 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LootBox"
         mc:Ignorable="d"
-        Title="LootBox - Storage Management" Height="450" Width="800">
+        Title="LootBox - Storage Management" Height="768" Width="1024">
+  
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75px" />
+            <ColumnDefinition Width="100px" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!-- Left column content -->
-        <Grid Grid.Column="0" Background="LightBlue">
+        <Grid Grid.Column="0" Background="SkyBlue" >
             <!-- Add your content here -->
+            <Button Content="Q" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="50" FontSize="20" FontFamily="Segoe UI Light" Style="{StaticResource ButtonStyle}"/>
+
+            
         </Grid>
 
         <!-- Right column content -->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Background="GhostWhite">
             <!-- Add your content here -->
+            
         </Grid>
     </Grid>
 </Window>
