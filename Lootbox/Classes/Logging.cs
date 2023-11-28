@@ -7,12 +7,12 @@ namespace LootBox.classes;
 
 public class Logging
 {
-    private string level = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly()!.Location) +
-                           @"\logs\";
 
 
     public class FileLogging
     {
+        public string _logFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly()!.Location) + @"\logs\";
+
         
         public Boolean Log(LogLevel level, string message)
         {
@@ -22,7 +22,25 @@ public class Logging
             {
                 if (level < 0)
                     return false;
-                string logFilePath = level;
+                string logFilePath = _logFolder;
+                logFilePath = Path.Combine(logFilePath, string.Format("info{0}.log",DateTime.UtcNow.ToString("yyyy-MM-dd HH-mm-ss")));
+                
+                // switch (level)
+                // {
+                //     case LogLevel.Information:
+                //         logFilePath = Path.Combine(logFilePath, "info.log");
+                //         break;
+                //     case LogLevel.Warning:
+                //         logFilePath = Path.Combine(logFilePath, "warning.log");
+                //         break;
+                //     case LogLevel.Error:
+                //         logFilePath = Path.Combine(logFilePath, "error.log");
+                //         break;
+                //     
+                //     
+                // }
+
+
                 string logEntry = $"{DateTime.Now} [{level}] {message}";
                 File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
                 success = true;
@@ -33,16 +51,17 @@ public class Logging
                 Debug.WriteLine(ex.Message);
                 success = false;
             }
+
             return success;
         }
 
-        private string GetLogFilePath()
-        {
-            string fileName = $"{_logFileName}_{DateTime.Now:yyyyMMdd}.log";
-            string filePath = Path.Combine(_logDirectory, fileName);
-
-            return filePath;
-        }
+        // private string GetLogFilePath()
+        // {
+        //     string fileName = $"{_logFileName}_{DateTime.Now:yyyyMMdd}.log";
+        //     string filePath = Path.Combine(_logDirectory, fileName);
+        //
+        //     return filePath;
+        // }
     }
 
     public enum LogLevel
@@ -52,12 +71,6 @@ public class Logging
         Error
     }
 
-    public enum LogFile
-    {
-        Auth,
-        Error,
-        Unknown
-    }
 }
 
 // Example How to Log
