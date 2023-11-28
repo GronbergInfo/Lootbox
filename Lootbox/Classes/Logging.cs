@@ -29,21 +29,6 @@ public class Logging
             logFilePath = Path.Combine(logFilePath,
                 $"{DateTime.UtcNow.ToString("yyyy-MM-dd HH-00-00")}.log");
 
-            // switch (level)
-            // {
-            //     case LogLevel.Information:
-            //         logFilePath = Path.Combine(logFilePath, "info.log");
-            //         break;
-            //     case LogLevel.Warning:
-            //         logFilePath = Path.Combine(logFilePath, "warning.log");
-            //         break;
-            //     case LogLevel.Error:
-            //         logFilePath = Path.Combine(logFilePath, "error.log");
-            //         break;
-            //     
-            //     
-            // }
-
 
             string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,Char.Parse(" ")) + " " + message;
             File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
