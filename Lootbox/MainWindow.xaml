@@ -5,33 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="LootBox - Storage Management" Height="768" Width="1024">
-  
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100px" />
             <ColumnDefinition Width="*" />
+
         </Grid.ColumnDefinitions>
 
         <!-- Left column content -->
         <Grid Grid.Column="0">
-            <Border CornerRadius="0,10,10,0">
+            <Border CornerRadius="0,10,0,0">
                 <Border.Effect>
-                    <DropShadowEffect ShadowDepth="2" Direction="270" Opacity="0.5"/>
+                    <DropShadowEffect ShadowDepth="2" Direction="270" Opacity="0.5" />
                 </Border.Effect>
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="DarkSlateBlue" Offset="0"/>
-                        <GradientStop Color="BlueViolet" Offset="1"/>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="DarkSlateBlue" Offset="0" />
+                        <GradientStop Color="BlueViolet" Offset="1" />
                     </LinearGradientBrush>
                 </Border.Background>
                 <!-- Add your content here -->
-                <Button Content="Q" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="50" FontSize="20" FontFamily="Calibri UI Light" Style="{StaticResource ButtonStyle}"/>
+                <DockPanel HorizontalAlignment="Stretch"
+                           Margin="4,0,4,0"
+                           Width="auto"
+                           Height="auto"
+                           VerticalAlignment="Stretch">
+                    <Button Content="Q" Height="47" VerticalAlignment="Top" Width="auto" Margin="4,4,4,4"
+                            FontSize="20" FontFamily="Calibri UI Light" Style="{StaticResource ButtonStyle}" />
+                </DockPanel>
             </Border>
         </Grid>
 
         <!-- Right column content -->
         <Grid Grid.Column="1" Background="GhostWhite">
+
+
             <!-- Add your content here -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="15" />
+                </Grid.RowDefinitions>
+
+                <!-- Content for the first row -->
+                <Grid Grid.Row="0">
+                    <!-- Add your content here -->
+                </Grid>
+
+                <!-- Content for the second row -->
+                <Grid Grid.Row="1" Background="GhostWhite" Margin="0,0">
+                    <Border>
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="DarkSlateBlue" Offset="1" />
+                                <GradientStop Color="BlueViolet" Offset="0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <!-- Add your content here -->
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
