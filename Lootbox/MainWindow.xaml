@@ -14,17 +14,12 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left column content -->
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0" Background="CornflowerBlue">
             <Border CornerRadius="0,10,0,0">
                 <Border.Effect>
                     <DropShadowEffect ShadowDepth="2" Direction="270" Opacity="0.5" />
                 </Border.Effect>
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="DarkSlateBlue" Offset="0" />
-                        <GradientStop Color="BlueViolet" Offset="1" />
-                    </LinearGradientBrush>
-                </Border.Background>
+                
                 <!-- Add your content here -->
                 <DockPanel HorizontalAlignment="Stretch"
                            Margin="4,0,4,0"
@@ -38,7 +33,7 @@
         </Grid>
 
         <!-- Right column content -->
-        <Grid Grid.Column="1" Background="GhostWhite">
+        <Grid Grid.Column="1" Background="LightGray">
 
 
             <!-- Add your content here -->
@@ -54,15 +49,7 @@
                 </Grid>
 
                 <!-- Content for the second row -->
-                <Grid Grid.Row="1" Background="GhostWhite" Margin="0,0">
-                    <Border>
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="DarkSlateBlue" Offset="1" />
-                                <GradientStop Color="BlueViolet" Offset="0" />
-                            </LinearGradientBrush>
-                        </Border.Background>
-                    </Border>
+                <Grid Grid.Row="1" Background="CornflowerBlue" Margin="0,0">
                     <!-- Add your content here -->
                 </Grid>
             </Grid>
