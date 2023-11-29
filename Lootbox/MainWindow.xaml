@@ -13,17 +13,25 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left column content -->
-        <Grid Grid.Column="0" Background="SkyBlue" >
-            <!-- Add your content here -->
-            <Button Content="Q" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="50" FontSize="20" FontFamily="Calibri UI Light" Style="{StaticResource ButtonStyle}"/>
-
-            
+        <Grid Grid.Column="0">
+            <Border CornerRadius="0,10,10,0">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2" Direction="270" Opacity="0.5"/>
+                </Border.Effect>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="DarkSlateBlue" Offset="0"/>
+                        <GradientStop Color="BlueViolet" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <!-- Add your content here -->
+                <Button Content="Q" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="50" FontSize="20" FontFamily="Calibri UI Light" Style="{StaticResource ButtonStyle}"/>
+            </Border>
         </Grid>
 
         <!-- Right column content -->
         <Grid Grid.Column="1" Background="GhostWhite">
             <!-- Add your content here -->
-            
         </Grid>
     </Grid>
 </Window>
