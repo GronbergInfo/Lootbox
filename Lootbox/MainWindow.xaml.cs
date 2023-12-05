@@ -8,7 +8,7 @@ namespace LootBox
     /// </summary>
     public partial class MainWindow
     {
-        Logging _log = new Logging();
+        readonly Logging _log = new Logging();
 
         public MainWindow()
         {

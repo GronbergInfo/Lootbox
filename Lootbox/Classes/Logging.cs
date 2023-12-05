@@ -19,14 +19,14 @@ public class Logging
                                             // it means that the log level is not set.
                                             // So, we exit the function with false.
             
-            string logFilePath = _logFolder;
+            var logFilePath = _logFolder;
             
             if (!Directory.Exists(logFilePath)) Directory.CreateDirectory(logFilePath); // Create the log directory if it does not exist.
             
             logFilePath = Path.Combine(logFilePath, $"{DateTime.UtcNow:yyyy-MM-dd HH-00-00}.log"); // Create the log file name.
 
 
-            string logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,char.Parse(" ")) + ": " + message;
+            var logEntry = $"{DateTime.Now} " + level.ToString().PadLeft(15,char.Parse(" ")) + ": " + message;
             File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
            
         }
