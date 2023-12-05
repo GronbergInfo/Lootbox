@@ -4,6 +4,13 @@
                     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks">
 
     <Style x:Key="HeaderItemStyle" TargetType="Control">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontFamily" Value="Cambria"/>
+        <!-- Add more setters for other properties you want to customize -->
+    </Style>
+
+    <Style x:Key="NormalItemStyle" TargetType="Control">
         <Setter Property="FontSize" Value="20" />
         <Setter Property="FontWeight" Value="Normal" />
         <Setter Property="FontFamily" Value="Cambria"/>

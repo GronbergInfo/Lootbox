@@ -5,7 +5,7 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 xmlns:TextOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 
                  TextOptions.TextFormattingMode="Ideal" 
                  TextOptions.TextRenderingMode="Auto"
                  mc:Ignorable="d"
@@ -52,15 +52,32 @@
     </mah:MetroWindow.RightWindowCommands>
 
     <Grid>
-        <Label Content="LootBox" Style="{StaticResource HeaderItemStyle}" /> 
-        <Label Style="{StaticResource HeaderItemStyle}">
-            <TextBlock>
-                 .<LineBreak/>
-                 LootBox - Cambria
-            </TextBlock>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60px" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+    
+            <!-- Top half -->
+            <Border Grid.Row="0" Background="LightGray">
+                <!-- Content for the top half -->
+                <Label Content="LootBox" Style="{StaticResource HeaderItemStyle}" /> 
+            </Border>
+    
+            <!-- Bottom half -->
+            <Border Grid.Row="1" Background="GhostWhite">
+                <!-- Content for the bottom half -->
+                <Label Style="{StaticResource NormalItemStyle}">
+                    <TextBlock>
+                        .<LineBreak/>
+                        LootBox - Cambria
+                    </TextBlock>
+                </Label>
 
-            
-        </Label>
+            </Border>
+        </Grid>
+        
         
     </Grid>
 </mah:MetroWindow>
