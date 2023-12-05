@@ -1,58 +1,14 @@
-﻿<Window x:Class="LootBox.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="LootBox - Storage Management" Height="768" Width="1024">
+﻿<mah:MetroWindow x:Class="LootBox.MainWindow"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 Title="LootBox - Storage Management" Height="768" Width="1024">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100px" />
-            <ColumnDefinition Width="*" />
-
-        </Grid.ColumnDefinitions>
-
-        <!-- Left column content -->
-        <Grid Grid.Column="0" Background="CornflowerBlue">
-            <Border CornerRadius="0,10,0,0">
-                <Border.Effect>
-                    <DropShadowEffect ShadowDepth="2" Direction="270" Opacity="0.5" />
-                </Border.Effect>
-                
-                <!-- Add your content here -->
-                <DockPanel HorizontalAlignment="Stretch"
-                           Margin="4,0,4,0"
-                           Width="auto"
-                           Height="auto"
-                           VerticalAlignment="Stretch">
-                    <Button Content="Q" Height="47" VerticalAlignment="Top" Width="auto" Margin="4,4,4,4"
-                            FontSize="20" FontFamily="Calibri UI Light" Style="{StaticResource ButtonStyle}" />
-                </DockPanel>
-            </Border>
-        </Grid>
-
-        <!-- Right column content -->
-        <Grid Grid.Column="1" Background="LightGray">
-
-
-            <!-- Add your content here -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="15" />
-                </Grid.RowDefinitions>
-
-                <!-- Content for the first row -->
-                <Grid Grid.Row="0">
-                    <!-- Add your content here -->
-                </Grid>
-
-                <!-- Content for the second row -->
-                <Grid Grid.Row="1" Background="CornflowerBlue" Margin="0,0">
-                    <!-- Add your content here -->
-                </Grid>
-            </Grid>
-        </Grid>
+        
     </Grid>
-</Window>
+</mah:MetroWindow>

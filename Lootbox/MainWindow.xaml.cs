@@ -1,12 +1,12 @@
 ﻿using LootBox.classes;
-
+using MahApps.Metro.Controls;
 
 namespace LootBox
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : MetroWindow
     {
         readonly Logging _log = new Logging();
 
